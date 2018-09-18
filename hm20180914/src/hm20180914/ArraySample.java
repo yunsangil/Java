@@ -67,12 +67,12 @@ public class ArraySample {
 		System.out.println("빈 방에서부터 차례대로 입력됩니다. 현재 빈 방의 번호는" + count + "입니다. 입력할 값을 입력해주세요.");
 		String addname = in.nextLine();
 		
-		for(int i=0;i<count;i++)
+		for(int i=0;i<name.length;i++)
 		{
 			if(name[i].equals(addname))
 			{
 				System.out.println("중복된 값을 입력하셨습니다.");
-				System.exit(0);
+				return;
 			}
 		}
 
