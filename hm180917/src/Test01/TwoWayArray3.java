@@ -16,10 +16,6 @@ public class TwoWayArray3 {
 				count++;
 			}
 			n--;
-			if(n==0)
-			{
-				break;
-			}
 			for(int i=0;i<n-2;i++)
 			{
 				x += increase;

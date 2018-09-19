@@ -137,6 +137,7 @@ public class TwoWayArray5 {
 		TwoWayArray2[3][2]=TwoWayArray[3][3];
 		TwoWayArray2[3][1]=TwoWayArray[3][2];
 		TwoWayArray2[2][1]=TwoWayArray[3][1];
+		TwoWayArray2[2][2]=TwoWayArray[2][2];
 		
 		
 		for(int i=0;i<5;i++) {
