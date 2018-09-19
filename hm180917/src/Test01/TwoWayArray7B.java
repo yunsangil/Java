@@ -1,6 +1,6 @@
 package Test01;
 
-public class TwoWayArray7 {
+public class TwoWayArray7B {
 
 	public static void main(String[] args) {
 		// 4*6;
@@ -19,27 +19,29 @@ public class TwoWayArray7 {
 		}
 		house[house.length - 1][house[0].length - 1] = 1;
 		while (trueorfalse) {
-			for (int i = 0; i < house.length; i++) {
+			for (int i = house.length-1; i >= 0; i--) {
 
-				for (int j = 0; j < house[i].length; j++) {
+				for (int j = house[i].length-1; j >= 0; j--) {
 
 					if (house[0][0] == 1) {
 						trueorfalse = false;
 						break;
 					} else if (house[0][j] == 1) {
 						house[i][j - 1] = 1;
+						days++;
 					} else if (house[i][0] == 1) {
 						house[i - 1][j] = 1;
+						days++;
 					}
 
 					else if (house[i][j] == 1) {
 						house[i][j - 1] = 1;
 						house[i - 1][j] = 1;
+						days++;
 					}
 
 				}
 			}
-			days++;
 		}
 		for (int i = 0; i < house.length; i++) {
 			for (int j = 0; j < house[i].length; j++) {
