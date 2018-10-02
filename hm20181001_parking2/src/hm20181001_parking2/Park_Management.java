@@ -1,5 +1,8 @@
 package hm20181001_parking2;
-
+import java.text.SimpleDateFormat;
+import java.util.Date;
+//입차시간 출차시간
+//
 import java.util.Scanner;
 
 public class Park_Management {
@@ -45,7 +48,9 @@ public class Park_Management {
 		System.out.println("차번을 입력해주세요.");
 		newCar.carNum = in.nextInt();
 		in.nextLine();
-
+		SimpleDateFormat park = new SimpleDateFormat("hh:mm:ss a");
+		Date date = new Date();
+		newCar.parktime = park.format(date);
 		for (int i = 0; i < forPark.length; i++) {
 			for (int j = 0; j < forPark[i].length; j++) {
 				if (forPark[i][j] != null) {
@@ -57,6 +62,7 @@ public class Park_Management {
 				}
 				if (newCar.carNum % 5 == j && forPark[i][j] == null) {
 					System.out.println(" 차번 " + newCar.carNum + "은" + i + "층" + j + "번 자리에 주차됩니다.");
+					System.out.println("입차 시간은 "+newCar.parktime+"입니다");
 					forPark[i][j] = newCar;
 					return;
 				}
@@ -102,6 +108,7 @@ public class Park_Management {
 	}
 
 	public void Leave_Car() {
+		String leavetime = null;
 		System.out.println("차량을 출차합니다.");
 		System.out.println("차번을 입력해주세요.");
 		int leavecar = in.nextInt();
@@ -112,6 +119,10 @@ public class Park_Management {
 				if (forPark[i][j] != null) {
 					if (forPark[i][j].carNum == leavecar) {
 						System.out.println("차번 " + forPark[i][j].carNum + "은" + i + "층" + j + "번 자리에서 출차하였습니다.");
+						SimpleDateFormat park = new SimpleDateFormat("hh:mm:ss a");
+						Date date = new Date();
+						leavetime = park.format(date);
+						System.out.println("출차 시간은 "+leavetime+"입니다.");
 						forPark[i][j] = null;
 					}
 					else if(forPark[i][j].carNum != leavecar)
@@ -131,6 +142,7 @@ public class Park_Management {
 			for (int j = 0; j < forPark[i].length; j++) {
 				if (forPark[i][j] != null) {
 					System.out.println(" 차번 " + forPark[i][j].carNum + "은" + i + "층" + j + "번 자리에 주차되어 있습니다..");
+					System.out.println("입차 시간은 "+forPark[i][j].parktime+"입니다");
 				}
 			}
 		}
