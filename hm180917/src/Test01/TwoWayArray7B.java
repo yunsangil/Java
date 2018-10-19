@@ -28,16 +28,17 @@ public class TwoWayArray7B {
 						break;
 					} else if (house[0][j] == 1) {
 						house[i][j - 1] = 1;
-						days++;
+//						days++;
 					} else if (house[i][0] == 1) {
 						house[i - 1][j] = 1;
-						days++;
+//						days++;
 					}
 
-					else if (house[i][j] == 1) {
+					else if 
+					(house[i][j] == 1) {
 						house[i][j - 1] = 1;
 						house[i - 1][j] = 1;
-						days++;
+//						days++;
 					}
 
 				}

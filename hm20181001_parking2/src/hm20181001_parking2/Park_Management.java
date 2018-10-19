@@ -1,8 +1,8 @@
 package hm20181001_parking2;
+
 import java.text.SimpleDateFormat;
 import java.util.Date;
 //입차시간 출차시간
-//
 import java.util.Scanner;
 
 public class Park_Management {
@@ -62,7 +62,7 @@ public class Park_Management {
 				}
 				if (newCar.carNum % 5 == j && forPark[i][j] == null) {
 					System.out.println(" 차번 " + newCar.carNum + "은" + i + "층" + j + "번 자리에 주차됩니다.");
-					System.out.println("입차 시간은 "+newCar.parktime+"입니다");
+					System.out.println("입차 시간은 " + newCar.parktime + "입니다");
 					forPark[i][j] = newCar;
 					return;
 				}
@@ -74,23 +74,19 @@ public class Park_Management {
 					System.out.println("지정된 자리가 가득 찼습니다.");
 					return;
 				}
-
 				if (newCar.carNum % 5 == 4 && forPark[1][4] != null && forPark[0][0] != null) {
 					System.out.println(" 차번 " + newCar.carNum + "은" + (i + 1) + "층" + 0 + "번 자리에 주차됩니다.");
 					forPark[i + 1][0] = newCar;
 					return;
-
 				} else if (newCar.carNum % 5 == 4 && forPark[1][4] != null) {
 					System.out.println(" 차번 " + newCar.carNum + "은" + i + "층" + 0 + "번 자리에 주차됩니다.");
 					forPark[i][0] = newCar;
 					return;
 				}
-
 				if (newCar.carNum % 5 == j && forPark[1][j + 1] != null) {
 					System.out.println("지정된 자리가 가득 찼습니다.");
 					return;
 				}
-
 				if (newCar.carNum % 5 == j && forPark[0][j + 1] != null) {
 
 					System.out.println(" 차번 " + newCar.carNum + "은" + (i + 1) + "층" + (j + 1) + "번 자리에 주차됩니다.");
@@ -101,9 +97,7 @@ public class Park_Management {
 					forPark[i][j + 1] = newCar;
 					return;
 				}
-
 			}
-
 		}
 	}
 
@@ -113,7 +107,6 @@ public class Park_Management {
 		System.out.println("차번을 입력해주세요.");
 		int leavecar = in.nextInt();
 		in.nextLine();
-
 		for (int i = 0; i < forPark.length; i++) {
 			for (int j = 0; j < forPark[i].length; j++) {
 				if (forPark[i][j] != null) {
@@ -122,17 +115,12 @@ public class Park_Management {
 						SimpleDateFormat park = new SimpleDateFormat("hh:mm:ss a");
 						Date date = new Date();
 						leavetime = park.format(date);
-						System.out.println("출차 시간은 "+leavetime+"입니다.");
+						System.out.println("출차 시간은 " + leavetime + "입니다.");
 						forPark[i][j] = null;
-					}
-					else if(forPark[i][j].carNum != leavecar)
-					{
+					} else if (forPark[i][j].carNum != leavecar) {
 						System.out.println("해당 차번은 주차되어있지 않습니다.");
 					}
 				}
-
-
-
 			}
 		}
 	}
@@ -142,7 +130,7 @@ public class Park_Management {
 			for (int j = 0; j < forPark[i].length; j++) {
 				if (forPark[i][j] != null) {
 					System.out.println(" 차번 " + forPark[i][j].carNum + "은" + i + "층" + j + "번 자리에 주차되어 있습니다..");
-					System.out.println("입차 시간은 "+forPark[i][j].parktime+"입니다");
+					System.out.println("입차 시간은 " + forPark[i][j].parktime + "입니다");
 				}
 			}
 		}

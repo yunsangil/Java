@@ -4,10 +4,7 @@ import java.util.Random;
 
 public class ArrayEx3 {
 	/*
-	 * 1. 배열 종류 : int string boolean
-	 * 2. 배열 이름
-	 * 3. 배열 길이
-	 * 4. 배열의 index와 value
+	 * 2. 중복 체크
 	 */
 	public static void main(String[] args) {
 

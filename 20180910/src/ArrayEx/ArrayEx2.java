@@ -5,8 +5,6 @@ import java.util.Random;
 public class ArrayEx2 {
 	/*
 	 * 1. 마지막에 제일 많이 나온 수
-	 * 2. 중복 체크
-	 * 3. 오름차순 정렬(버블정렬)
 	 */
 	public static void main(String[] args) {
 		

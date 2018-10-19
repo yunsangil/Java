@@ -41,12 +41,6 @@ public class TwoWayArray7 {
 			}
 			days++;
 		}
-		for (int i = 0; i < house.length; i++) {
-			for (int j = 0; j < house[i].length; j++) {
-				System.out.print(house[i][j] + "/");
-			}
-			System.out.println();
-		}
 		System.out.println("감염까지 걸리는 시간 :" + days + "일");
 
 		long endTime = System.currentTimeMillis();

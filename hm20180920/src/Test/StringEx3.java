@@ -26,19 +26,7 @@ static String sign = "!@#$%^&*";
 		//현재 s가 sign에 포함되는지??
 		//포함되면 true
 		//포함되지 않으면 false
-//		boolean trueorfalse=true;
-//		for(int i=0;i<sign.length();i++)
-//		{
-//			if(s.equals(sign.charAt(i)))
-//			{
-//				trueorfalse=true;
-//			}
-//			else
-//			{
-//				trueorfalse=false;
-//			}
-//		}
-//		return trueorfalse;
+
 		for(int i=0;i<sign.length();i++)
 		{
 			if(sign.charAt(i)==s)

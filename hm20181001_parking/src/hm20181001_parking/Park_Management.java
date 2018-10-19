@@ -75,8 +75,21 @@ public class Park_Management {
 		}
 		for (int i = 0; i < forPark.length; i++) {
 			for (int j = 0; j < forPark[i].length; j++) {
-
-				if(newCar.carNum%5==j&&forPark[i][j]!=null && forPark[i+1][j]!=null && forPark[i][j+1]!=null && forPark[i+1][j+1]!=null&&j<forPark.length-1)
+				
+//				if(forPark[i][j]!=null && forPark[i+1][j]!=null 
+//						&& forPark[i][j+1]!=null && forPark[i+1][j+1]!=null&&j<forPark.length-1) {
+//				
+//					System.out.println("배정될 자리가 가득 찼습니다. 잠시만 기다려주세요.");
+//					return;
+//				}
+				if(newCar.carNum%5<forPark.length-1&&forPark[i][j]!=null &&forPark[i+1][j]!=null && 
+						forPark[i][j+1]!=null && forPark[i+1][j+1]!=null)
+				{
+					System.out.println("배정될 자리가 가득 찼습니다. 잠시만 기다려주세요.");
+					return;
+				}
+				else if(newCar.carNum%5==forPark.length-1&&forPark[i][j]!=null &&forPark[i+1][j]!=null && 
+						forPark[i][0]!=null && forPark[i+1][0]!=null)
 				{
 					System.out.println("배정될 자리가 가득 찼습니다. 잠시만 기다려주세요.");
 					return;
