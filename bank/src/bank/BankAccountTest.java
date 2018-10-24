@@ -10,7 +10,7 @@ public class BankAccountTest {
 		
 		BankAccount ysi = new BankAccount();
 		
-		ysi.balance=-10;
+		ysi.balance=50;
 		System.out.println("출금하실 금액을 입력하세요.");
 		ysi.withdraw(input.nextInt());
 		
