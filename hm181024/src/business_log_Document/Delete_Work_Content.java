@@ -5,7 +5,7 @@ import java.util.Scanner;
 import business_log_Administration.Handling_business_log;
 import business_log_Administration.listOf_business_log;
 
-public class Delete_Work_Content {
+class Delete_Work_Content {
 
 	Handling_business_log h_b_log = null;
 	private Scanner in = new Scanner(System.in);

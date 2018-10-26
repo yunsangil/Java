@@ -5,7 +5,7 @@ import java.util.Scanner;
 import business_log_Administration.Handling_business_log;
 import business_log_Administration.listOf_business_log;
 
-public class Update_Work_Content {
+class Update_Work_Content {
 	Handling_business_log h_b_log = null;
 	private Scanner in = new Scanner(System.in);
 	private String input_num, mod_CNum,input_time,input_content;

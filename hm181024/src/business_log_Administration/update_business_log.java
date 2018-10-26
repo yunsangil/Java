@@ -3,7 +3,7 @@ package business_log_Administration;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class update_business_log {
+class update_business_log {
 
 	private String mod_worknum,input_work;
 	private int input_select, searched_index, input_year, input_month, input_day;
