@@ -51,6 +51,11 @@ public class update_business_log {
 										input_month = in.nextInt();
 										input_day = in.nextInt(); // 띄어쓰기로 구분을 주고 연달아 입력을 해도 세 변수가 구분이 되서 입력이 된다.
 										in.nextLine();
+										if(input_month>12||input_day>30)
+										{
+											System.out.println("날짜를 제대로 입력해주세요!");
+										}
+										else {
 										System.out.println("입력하신 날짜는 " + input_year + "년" + input_month + "월"
 												+ input_day + "일 입니다. 맞습니까?");
 										System.out.println("1. 예 / 2.아니오 / 3.종료");
@@ -75,6 +80,7 @@ public class update_business_log {
 											break;
 										}
 									}
+									}
 								} else if (input_select == 2) {
 									flag3=true;
 									while (flag3) {
@@ -85,6 +91,12 @@ public class update_business_log {
 										input_month = in.nextInt();
 										input_day = in.nextInt(); // 띄어쓰기로 구분을 주고 연달아 입력을 해도 세 변수가 구분이 되서 입력이 된다.
 										in.nextLine();
+
+										if(input_month>12||input_day>30)
+										{
+											System.out.println("날짜를 제대로 입력해주세요!");
+										}
+										else {
 										System.out.println("입력하신 날짜는 " + input_year + "년" + input_month + "월"
 												+ input_day + "일 입니다. 맞습니까?");
 										System.out.println("1. 예 / 2.아니오 / 3.종료");
@@ -99,13 +111,14 @@ public class update_business_log {
 											flag3=false;
 											System.out.println("수정이 완료되었습니다!");
 											break;
-										} else if (input_select == 2) {
+										}else if (input_select == 2) {
 											System.out.println("다시 입력해주세요.");
 										}
 										else if(input_select ==3)
 										{
 											break;
 										}
+									}
 									}
 
 								} else if (input_select == 3) {

@@ -49,6 +49,10 @@ public class Delete_Work_Content {
 							input_select = in.nextInt();
 							in.nextLine();
 							if (input_select == 1) {
+
+								System.out.println("현재 저장된 업무 내용은 다음과 같습니다.");
+
+									System.out.println(h_b_log.create_b_log.b_log.get(searched_index).WorkContent.toString());
 								System.out.println("삭제하려고 하는 업무 내용 번호를 입력해주세요.");
 								del_CNum = in.nextLine();
 								for (int k = 0; k < h_b_log.create_b_log.b_log.get(searched_index).WorkContent
@@ -59,6 +63,7 @@ public class Delete_Work_Content {
 												h_b_log.create_b_log.b_log.get(searched_index).WorkContent.get(k));
 										System.out.println("가 삭제되었습니다.");
 										h_b_log.create_b_log.b_log.get(searched_index).WorkContent.remove(k);
+										return;
 									}
 
 								}

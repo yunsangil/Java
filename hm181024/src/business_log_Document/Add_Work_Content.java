@@ -10,7 +10,6 @@ public class Add_Work_Content {
 	private Scanner in = new Scanner(System.in);
 	private String input_num, input_time, input_content,ContentNum;
 	private int input_select, searched_index;
-	private boolean flag = true;
 	private boolean flag2 = false;
 
 	public Add_Work_Content(Handling_business_log hl) {
@@ -39,6 +38,7 @@ public class Add_Work_Content {
 					in.nextLine();
 
 					if (input_select == 1) {
+						boolean flag = true;
 						while (flag) {
 							searched_index = i;
 							Work_Content add = new Work_Content();

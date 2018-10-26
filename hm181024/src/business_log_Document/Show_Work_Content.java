@@ -13,7 +13,7 @@ public class Show_Work_Content {
 	private int input_select, searched_index;
 	private boolean flag = false;
 
-	public Show_Work_Content(Handling_business_log hl) { //Add_Work_Content와 내용이 흡사하다.
+	public Show_Work_Content(Handling_business_log hl) { // Add_Work_Content와 내용이 흡사하다.
 		this.h_b_log = hl;
 	}
 
@@ -43,20 +43,18 @@ public class Show_Work_Content {
 						for (int k = 0; k < h_b_log.create_b_log.b_log.get(searched_index).WorkContent.size(); k++) {
 							System.out.println(
 									h_b_log.create_b_log.b_log.get(searched_index).WorkContent.get(k).toString());
-
-							System.out.println("추가로 조회하실 업무 일지 번호가 있나요?");
-							System.out.println("1.예 / 2.아니오");
-							input_select = in.nextInt();
-							in.nextLine();
-							if (input_select == 1) {
-								System.out.println("다시 처음으로 돌아갑니다.");
-								show();
-							} else if (input_select == 2) {
-								System.out.println("업무일지 조회 종료");
-								break;
-							}
 						}
-
+						System.out.println("추가로 조회하실 업무 일지 번호가 있나요?");
+						System.out.println("1.예 / 2.아니오");
+						input_select = in.nextInt();
+						in.nextLine();
+						if (input_select == 1) {
+							System.out.println("다시 처음으로 돌아갑니다.");
+							show();
+						} else if (input_select == 2) {
+							System.out.println("업무일지 조회 종료");
+							break;
+						}
 					} else if (input_select == 2) {
 						System.out.println("다시 처음으로 돌아갑니다.");
 						show();

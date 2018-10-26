@@ -47,11 +47,11 @@ public class Update_Work_Content {
 							in.nextLine();
 							if (input_select == 1) {
 								System.out.println("현재 저장된 업무 내용은 다음과 같습니다.");
-								for(int j=0;j<h_b_log.create_b_log.b_log.get(searched_index).WorkContent
-										.size();j++)
-								{
+//								for(int j=0;j<h_b_log.create_b_log.b_log.get(searched_index).WorkContent
+//										.size();j++)
+//								{
 									System.out.println(h_b_log.create_b_log.b_log.get(searched_index).WorkContent.toString());
-								}
+//								}
 								System.out.println("수정하려고 하는 업무 내용 번호를 입력해주세요.");
 								mod_CNum = in.nextLine();
 								for (int k = 0; k < h_b_log.create_b_log.b_log.get(searched_index).WorkContent

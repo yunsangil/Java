@@ -13,9 +13,9 @@ class delete_business_log { //delete는 중요한 사안이므로, 쉽게 접근할 수도 없게 
 	void delete_logic(ArrayList<business_log> b_log) {
 		boolean flag = true;
 		while (flag) {
-			System.out.println("업무일지 삭제 메뉴입니다. list를 불러옵니다.");
 			listOf_business_log.listOf_b_log(b_log);
 			flag2 = listOf_business_log.flag;
+			System.out.println("업무일지 삭제 메뉴입니다. list를 불러옵니다.");
 			if (flag2 == false) {
 				flag=false;
 			} else {
